@@ -25,6 +25,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <distributionManagement.repository.url>${pom.url}</distributionManagement.repository.url>
     </properties>
 
     <developers>
@@ -42,12 +43,12 @@
         <snapshotRepository>
             <id>nexus</id>
             <name>Releases</name>
-            <url>http://localhost:8081/repository/maven-snapshots</url>
+            <url>${distributionManagement.repository.url}/maven-snapshots</url>
         </snapshotRepository>
         <repository>
             <id>nexus</id>
             <name>Releases</name>
-            <url>http://localhost:8081/repository/maven-releases</url>
+            <url>${distributionManagement.repository.url}/maven-releases</url>
         </repository>
     </distributionManagement>
 
